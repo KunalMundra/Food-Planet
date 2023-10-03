@@ -1,0 +1,33 @@
+{
+  "name": "food-planet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KunalMundra/Hungry-Hub.git"
+  },
+  "author": "Kunal Mundra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KunalMundra/Hungry-Hub/issues"
+  },
+  "homepage": "https://github.com/KunalMundra/Hungry-Hub#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
