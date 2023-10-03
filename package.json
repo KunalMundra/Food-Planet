@@ -9,14 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KunalMundra/Hungry-Hub.git"
+    "url": "git+https://github.com/KunalMundra/Food-Planet.git"
   },
   "author": "Kunal Mundra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KunalMundra/Hungry-Hub/issues"
+    "url": "https://github.com/KunalMundra/Food-Planet/issues"
+    
   },
-  "homepage": "https://github.com/KunalMundra/Hungry-Hub#readme",
+  "homepage": "https://github.com/KunalMundra/Food-Planet#readme",
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
