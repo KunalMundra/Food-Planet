@@ -620,8 +620,7 @@ const Header = () => {
     );
 };
 
-const RestaurantCard = (props) => {
-    const {cloudinaryImageId, name, cuisines, avgRatingString} = props.restaurant?.info;
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRatingString }) => {
     return (
         <div className="Card">
             <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
@@ -637,15 +636,11 @@ const RestaurantCard = (props) => {
 const Body = () => {
     return (
         <div className="restaurant-list">
-            <RestaurantCard restaurant={restaurantList[0]}/>
-            {/* {RestaurantCard(restaurantList[0])} 
-                Both are similar (Know the basics - RestaurantCard is just a function and restaurantList[0] is passed as argument)
-            */}
-            <RestaurantCard restaurant={restaurantList[1]} />
-            <RestaurantCard restaurant={restaurantList[2]}  hell0 = "world"/> {/*multiple props sent*/}
-            <RestaurantCard restaurant={restaurantList[3]} />
-            <RestaurantCard restaurant={restaurantList[4]} />
-            <RestaurantCard restaurant={restaurantList[5]} />
+            {
+                restaurantList.map((restaurant) => {
+                    return <RestaurantCard {...restaurant.info} />
+                })
+            }
         </div>
     )
 }
