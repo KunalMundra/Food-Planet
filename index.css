@@ -23,3 +23,19 @@
     align-items: center;
     margin: auto;
 }
+
+.Card{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.Card > img {
+    width: 100%;
+}
+
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+}
