@@ -621,14 +621,14 @@ const Header = () => {
 };
 
 const RestaurantCard = (props) => {
-    console.log(props)
+    const {cloudinaryImageId, name, cuisines, avgRatingString} = props.restaurant?.info;
     return (
         <div className="Card">
             <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-                props.restaurant?.info.cloudinaryImageId} /> {/* By default link only Id changes */}
-            <h2>{props.restaurant?.info.name}</h2>  {/* In curly brackets because it is JS not JSX */}
-            <h3>{props.restaurant?.info.cuisines.join(", ")}</h3>
-            <h4>{props.restaurant?.info.avgRatingString} star</h4>
+                cloudinaryImageId} /> {/* By default link only Id changes */}
+            <h2>{name}</h2>  {/* In curly brackets because it is JS not JSX */}
+            <h3>{cuisines.join(", ")}</h3>
+            <h4>{avgRatingString} star</h4>
         </div>
     )
 }
