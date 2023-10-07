@@ -1,7 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
+export const IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-const restaurantList = [
+export const restaurantList = [
     {
         "info": {
             "id": "14548",
@@ -590,77 +589,3 @@ const restaurantList = [
         }
     },
 ]
-
-
-const Title = () => (
-    <h1 className="title" key="h1">
-        <a href="/">
-            <img
-                className="logo"
-                alt="logo"
-                src="https://jharkhandbihar.com/productimages/30065.jpg"
-            />
-        </a>
-    </h1>
-);
-
-const Header = () => {
-    return (
-        <div className="header">
-            <Title />
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-};
-
-const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRatingString }) => {
-    return (
-        <div className="Card">
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-                cloudinaryImageId} /> {/* By default link only Id changes */}
-            <h2>{name}</h2>  {/* In curly brackets because it is JS not JSX */}
-            <h3>{cuisines.join(", ")}</h3>
-            <h4>{avgRatingString} star</h4>
-        </div>
-    )
-}
-
-
-const Body = () => {
-    return (
-        <div className="restaurant-list">
-            {
-                restaurantList.map((restaurant) => {
-                    return <RestaurantCard {...restaurant.info} key={restaurant.info.id}/>
-                })
-            }
-        </div>
-    )
-}
-
-const Footer = () => {
-    return (
-        <h4>Footer</h4>
-    )
-}
-
-const AppLayout = () => {
-    return (
-        <>
-            <Header />
-            <Body />
-            <Footer />
-        </>
-
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
