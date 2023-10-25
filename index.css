@@ -39,3 +39,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.shimmer-card{
+    height: 300px;
+    width: 140px;
+    background-color: lightgray;
+    margin: 20px;
+}
