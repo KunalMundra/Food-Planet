@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useOnline from "./useOnline";
 
 const useRestaurant = () => {
     const [allRestaurants, setAllRestaurants] = useState([]);
@@ -9,7 +10,7 @@ const useRestaurant = () => {
         getRestaurants();
     }, [])
 
-    console.log("render");
+    const offline = useOnline();
 
     async function getRestaurants() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5116937&lng=73.80349140000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
@@ -20,7 +21,7 @@ const useRestaurant = () => {
 
     }
 
-    return {allRestaurants, filteredRestaurants, SearchText, setFilteredRestaurants, setSearchText};
+    return {offline, allRestaurants, filteredRestaurants, SearchText, setFilteredRestaurants, setSearchText};
 }
 
 export default useRestaurant;

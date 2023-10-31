@@ -7,8 +7,12 @@ import useRestaurant from "../utils/useRestaurant";
 
 const Body = () => {
 
-    const {allRestaurants, filteredRestaurants, SearchText,setFilteredRestaurants, setSearchText} = useRestaurant();
-    
+    const {offline, allRestaurants, filteredRestaurants, SearchText,setFilteredRestaurants, setSearchText} = useRestaurant();
+
+    if(!offline){
+        return <h1>uh oh! you are offline</h1>
+    }
+
     if (!allRestaurants) return null;
 
     return (allRestaurants?.length === 0) ? <Shimmer /> : (
