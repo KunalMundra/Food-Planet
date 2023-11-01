@@ -1,6 +1,7 @@
-import { useState } from "react";
 import Logo from "../assets/img/Logo.jpg"
 import { Link } from "react-router-dom";
+import useLogin from "../utils/useLogin";
+
 
 const Title = () => (
     <h1 className="title" key="h1">
@@ -11,8 +12,7 @@ const Title = () => (
 );
 
 const Header = () => {
-
-    const [isLoggedin, setIsLoggedin] = useState(false);
+    const loginButton = useLogin();
 
     return (
         <div className="header">
@@ -25,11 +25,7 @@ const Header = () => {
                     <li> <Link to="/cart">Cart</Link></li>
                 </ul>
             </div>
-            {isLoggedin ?
-                <button onClick={() => setIsLoggedin(!isLoggedin)}>Login</button>
-                :
-                <button onClick={() => setIsLoggedin(!isLoggedin)}>Logout</button>
-            }
+            {loginButton}
         </div>
     );
 };

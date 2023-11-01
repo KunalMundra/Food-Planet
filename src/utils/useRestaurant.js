@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useOnline from "./useOnline";
+import useOnline from "../utils/useOnline"
 
 const useRestaurant = () => {
     const [allRestaurants, setAllRestaurants] = useState([]);
