@@ -9,15 +9,16 @@ const useRestaurant = () => {
     useEffect(() => {
         getRestaurants();
     }, [])
-
+ 
     const offline = useOnline();
 
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5116937&lng=73.80349140000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=18.518467248959915&lng=73.81702568382025")
         const json = await data.json();
         console.log(json);
-        setAllRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        // console.log(json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
+        setAllRestaurants(json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredRestaurants(json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
 
     }
 

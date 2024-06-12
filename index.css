@@ -1,53 +1,5 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid black;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav-items > ul {
-    list-style: none;
-    display: flex;
-}
-
-.nav-items > ul > li {
-    padding: 10px;
-}
-
-.title{
-    margin: 0px;
-}
-
-.logo{
-    width: 80px;
-    align-items: center;
-    margin: auto;
-}
-
-.Card{
-    width: 140px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.Card > img {
-    width: 100%;
-}
-
-.restaurant-list{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.shimmer-card{
-    height: 300px;
-    width: 140px;
-    background-color: lightgray;
-    margin: 20px;
-}
-
-.menu{
-    display: flex;
-}
-
+/* this is like importing tailwind css into our project. */
